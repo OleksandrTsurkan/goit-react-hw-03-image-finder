@@ -1,7 +1,8 @@
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
+import { ImageGalleryList} from './ImageGallery.styled';
 
 export const ImageGallery = ({ photos, onClickImageItem }) => (
-  <ul>
+  <ImageGalleryList>
     {photos.map(({ id, webformatURL, tags, largeImageURL }) => (
       <ImageGalleryItem
         key={id}
@@ -11,7 +12,6 @@ export const ImageGallery = ({ photos, onClickImageItem }) => (
         onClickImageItem={onClickImageItem}
       />
     ))}
-  </ul>
+  </ImageGalleryList>
 );
 export default ImageGallery;
-

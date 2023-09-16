@@ -1,4 +1,5 @@
 import React from 'react';
+import { ImageGalleryItemImg} from './ImageGalleryItem.styled';
 
 export const ImageGalleryItem = ({
   id,
@@ -12,7 +13,7 @@ export const ImageGalleryItem = ({
   };
   return (
     <li key={id} data-id={id} onClick={onImageClick}>
-      <img src={smallUrl} alt={tags} />
+      <ImageGalleryItemImg src={smallUrl} alt={tags} />
     </li>
   );
 };

@@ -1,9 +1,11 @@
+import { ButtonMore, WrapperButton } from './Button.styled';
+
 export const Button = ({ onClickRender }) => {
   return (
-    <div>
-      <button type="button" onClick={onClickRender}>
+    <WrapperButton>
+      <ButtonMore type="button" onClick={onClickRender}>
         Load more
-      </button>
-    </div>
+      </ButtonMore>
+    </WrapperButton>
   );
 };
