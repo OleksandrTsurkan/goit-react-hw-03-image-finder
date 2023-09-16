@@ -19,6 +19,7 @@ export class Modal extends Component {
       this.props.onClose();
     }
   };
+
   render() {
     const {
       selectedPhoto: { src, alt },

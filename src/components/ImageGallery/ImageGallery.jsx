@@ -1,15 +1,17 @@
 import ImageGalleryItem from 'components/ImageGalleryItem/ImageGalleryItem';
 
-export const ImageGalery = ({ photos, onClickImageItem }) => (
+export const ImageGallery = ({ photos, onClickImageItem }) => (
   <ul>
     {photos.map(({ id, webformatURL, tags, largeImageURL }) => (
       <ImageGalleryItem
         key={id}
         tags={tags}
-        url={webformatURL}
-        onClickImageItem={onClickImageItem}
+        smallUrl={webformatURL}
         largeImage={largeImageURL}
+        onClickImageItem={onClickImageItem}
       />
     ))}
   </ul>
 );
+export default ImageGallery;
+

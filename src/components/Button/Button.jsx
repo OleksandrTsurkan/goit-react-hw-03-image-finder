@@ -1,3 +1,9 @@
 export const Button = ({ onClickRender }) => {
-  return <button type="button" onClick={onClickRender}></button>;
+  return (
+    <div>
+      <button type="button" onClick={onClickRender}>
+        Load more
+      </button>
+    </div>
+  );
 };

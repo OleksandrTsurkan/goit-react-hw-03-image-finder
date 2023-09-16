@@ -1,7 +1,8 @@
 import { Component } from 'react';
- import { toast } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
-class Searchbar extends Component {
+export class Searchbar extends Component {
   state = {
     value: '',
   };
@@ -13,12 +14,12 @@ class Searchbar extends Component {
   handleSubmit = e => {
     e.preventDefault();
     if (this.state.value.trim() === '') {
-      toast.info('Input the request');
+      toast.info('Введіть свій запит, будь ласка!');
       return;
     }
     this.props.onSubmit(this.state.value);
     this.reset();
-  }; 
+  };
 
   reset = () =>
     this.setState({
@@ -26,25 +27,25 @@ class Searchbar extends Component {
     });
 
   render() {
+    const { value } = this.state;
     return (
-      <header className="searchbar">
-        <form className="form">
-          <button type="submit" className="button">
-            <span className="button-label">Search</span>
-          </button>
-
+      <div>
+        <form onSubmit={this.handleSubmit}>
           <input
-            className="input"
             type="text"
-            autocomplete="off"
-            autofocus
+            onChange={this.handleChange}
+            value={value}
+            autoComplete="off"
+            autoFocus
             placeholder="Search images and photos"
           />
+          <button type="submit">
+            <span>Search</span>
+          </button>
         </form>
-      </header>
+      </div>
     );
   }
 }
-
 
 export default Searchbar;

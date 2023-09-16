@@ -1,15 +1,15 @@
-import { Audio } from 'react-loader-spinner';
+// import { Audio } from 'react-loader-spinner';
+
+import { RotatingLines } from 'react-loader-spinner';
 
 export const Loader = () => (
-  <div>
-    <Audio
-      height="80"
-      width="80"
-      radius="9"
-      color="green"
-      ariaLabel="three-dots-loading"
-      wrapperStyle
-      wrapperClass
+  <div >
+    <RotatingLines
+      strokeColor="blue"
+      strokeWidth="5"
+      animationDuration="0.75"
+      width="150"
+      visible={true}
     />
   </div>
 );
