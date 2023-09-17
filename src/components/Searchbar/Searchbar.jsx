@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { ButtonSearch, FormSearch, Searchbardiv } from './Searchbar.styled';
+import { ButtonSearch, FormInput, FormSearch, Searchbardiv } from './Searchbar.styled';
 
 export class Searchbar extends Component {
   state = {
@@ -32,7 +32,7 @@ export class Searchbar extends Component {
     return (
       <Searchbardiv>
         <FormSearch onSubmit={this.handleSubmit}>
-          <input
+          <FormInput
             type="text"
             onChange={this.handleChange}
             value={value}

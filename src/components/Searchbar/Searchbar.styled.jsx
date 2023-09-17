@@ -14,7 +14,7 @@ export const Searchbardiv = styled.div`
   padding-top: 12px;
   padding-bottom: 12px;
   color: #fff;
-  background-color: #3f51b5;
+  background-color: #5367da;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
 `;
@@ -40,4 +40,22 @@ export const ButtonSearch = styled.button`
   font-size: 18px;
   line-height: 24px;
   font-style: normal;
+  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  &:hover {
+    border: 3px dotted #3a7999;
+    color: red;
+    background: rgba(0, 0, 0, 0);
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+`;
+
+
+export const FormInput = styled.input`
+  display: inline-block;
+  width: 100%;
+  font-size: 24px;
+  border: none;
+  outline: none;
+  padding-left: 4px;
+  padding-right: 4px;
 `;
